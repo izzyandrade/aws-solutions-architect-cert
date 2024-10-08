@@ -28,3 +28,9 @@ aws s3api delete-objects \
  --delete file://delete-objects.json
 
 rm delete-objects.json
+
+# this obviously could have been done with a single command like aws s3 rm $BUCKET_NAME --recursive
+# but I wanted to show the transformation of the input
+# and also the use of jq for transformation
+# besides, this script could be used to delete objects with a prefix by using a wildcard in the query
+# or to delete objects that match a specific query like this
