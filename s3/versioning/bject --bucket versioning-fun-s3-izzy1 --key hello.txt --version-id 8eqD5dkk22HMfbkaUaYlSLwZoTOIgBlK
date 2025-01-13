@@ -1,0 +1,32 @@
+{
+    "Versions": [
+        {
+            "ETag": "\"92fa5169b5d4b9e5338c3bcec9cd14ac\"",
+            "Size": 12,
+            "StorageClass": "STANDARD",
+            "Key": "hello.txt",
+            "VersionId": "wbGuT4vEVB3FRVpCFW9HQHw9wbp6hbc7",
+            "IsLatest": true,
+            "LastModified": "2025-01-13T00:31:22+00:00",
+            "Owner": {
+                "DisplayName": "israelcarneiro97",
+                "ID": "3bad533e8043135ad74fa5bfbf2dde375b73ae63e02482ea0581ddcdd81a0826"
+            }
+        },
+        {
+            "ETag": "\"38b8ac23ca0da1f4b746fc46b5250f96\"",
+            "Size": 42,
+            "StorageClass": "STANDARD",
+            "Key": "hello.txt",
+            "VersionId": "8eqD5dkk22HMfbkaUaYlSLwZoTOIgBlK",
+            "IsLatest": false,
+            "LastModified": "2025-01-13T00:20:35+00:00",
+            "Owner": {
+                "DisplayName": "israelcarneiro97",
+                "ID": "3bad533e8043135ad74fa5bfbf2dde375b73ae63e02482ea0581ddcdd81a0826"
+            }
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": "hello.txt"
+}
