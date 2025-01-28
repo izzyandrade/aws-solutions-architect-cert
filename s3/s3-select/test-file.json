@@ -1,0 +1,44 @@
+{
+    "people": [
+        {
+            "name": "John Smith",
+            "age": 32
+        },
+        {
+            "name": "Maria Garcia",
+            "age": 28
+        },
+        {
+            "name": "David Chen",
+            "age": 45
+        },
+        {
+            "name": "Sarah Johnson",
+            "age": 19
+        },
+        {
+            "name": "Michael Brown",
+            "age": 51
+        },
+        {
+            "name": "Emma Wilson",
+            "age": 24
+        },
+        {
+            "name": "James Lee",
+            "age": 37
+        },
+        {
+            "name": "Sofia Rodriguez",
+            "age": 42
+        },
+        {
+            "name": "William Taylor",
+            "age": 29
+        },
+        {
+            "name": "Olivia Martinez",
+            "age": 33
+        }
+    ]
+}
