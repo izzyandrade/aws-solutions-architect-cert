@@ -19,3 +19,10 @@ aws s3api put-object-tagging \
     --key test-file.txt \
     --tagging '{"TagSet": [{ "Key": "designation", "Value": "confidential" }]}'
 ```
+
+## Cleanup
+
+```bash
+aws s3 rm s3://s3-object-tags-fun-izzy-12345/test-file.txt
+aws s3 rb s3://s3-object-tags-fun-izzy-12345
+```

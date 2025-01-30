@@ -4,6 +4,18 @@ s3/sdk/.env
 # Local .terraform directories
 **/.terraform/*
 
+# Ignore the .terraform directory
+.terraform/
+
+# Ignore the .terraform.tfstate.lock.info file
+.terraform.tfstate.lock.info    
+
+# Ignore the .terraform.tfstate file
+.terraform.tfstate
+
+# Ignore the .terraform.tfstate.backup file
+.terraform.tfstate.backup
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
