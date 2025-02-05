@@ -1,0 +1,63 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Static Website Hosting
+
+Parameters:
+    DomainName:
+        Type: String
+        Default: sweetcuriosity.com
+
+Resources:
+    # WWW Bucket
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#aws-resource-s3-bucket-syntax
+    WWWBucket:
+        Type: "AWS::S3::Bucket"
+        DeletionPolicy: Delete
+        Properties:
+            BucketName: !Sub "www.${DomainName}"
+            PublicAccessBlockConfiguration:
+                BlockPublicAcls: false
+                BlockPublicPolicy: false
+                IgnorePublicAcls: false
+                RestrictPublicBuckets: false
+            WebsiteConfiguration:
+                IndexDocument: "index.html"
+                ErrorDocument: "error.html"
+    RootBucket:
+        Type: "AWS::S3::Bucket"
+        DeletionPolicy: Delete
+        Properties:
+            BucketName: !Ref DomainName
+            PublicAccessBlockConfiguration:
+                BlockPublicAcls: false
+                BlockPublicPolicy: false
+                IgnorePublicAcls: false
+                RestrictPublicBuckets: false
+            WebsiteConfiguration:
+                RedirectAllRequestsTo:
+                    HostName: !Sub "www.${DomainName}.s3-website.${AWS::Region}.amazonaws.com"
+
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucketpolicy.html
+    BucketPolicy:
+        Type: "AWS::S3::BucketPolicy"
+        Properties:
+            Bucket: !Ref WWWBucket
+            PolicyDocument:
+                Version: 2012-10-17
+                Statement:
+                    - Action:
+                          - "s3:GetObject"
+                      Effect: Allow
+                      Resource:
+                          - !Sub "arn:aws:s3:::${WWWBucket}/*"
+                      Principal: "*"
+
+Outputs:
+    RootBucketURL:
+        Description: The URL of the root bucket
+        Value: !GetAtt RootBucket.WebsiteURL
+    WWWBucketURL:
+        Description: The URL of the WWW bucket
+        Value: !GetAtt WWWBucket.WebsiteURL
+# CloudFront Distribution
+
+# OAC (Origin Access Control)
