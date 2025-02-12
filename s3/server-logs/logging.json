@@ -1,0 +1,6 @@
+{
+    "LoggingEnabled": {
+        "TargetBucket": "server-logs-destination-bucket-fun-izzy-123",
+        "TargetPrefix": "Logs/"
+    }
+}
