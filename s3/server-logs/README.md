@@ -1,5 +1,3 @@
-> This needs more work since I couldn't actually make logs appear in the destination bucket, although everything seems configured in AWS Console.
-
 # Create source and destination buckets
 
 ```bash
@@ -37,6 +35,7 @@ aws s3 ls s3://server-logs-destination-bucket-fun-izzy-123/Logs/
 
 ```bash
 aws s3 rm s3://server-logs-source-bucket-fun-izzy-123/test.txt
+aws s3 rm s3://server-logs-destination-bucket-fun-izzy-123 --recursive
 aws s3 rb s3://server-logs-source-bucket-fun-izzy-123
 aws s3 rb s3://server-logs-destination-bucket-fun-izzy-123
 ```
