@@ -1,0 +1,1 @@
+{"statusCode":200,"body":"{\"message\":\"Objects successfully listed from S3\",\"bucket\":\"gateway-endpoint-example-izzy\",\"prefix\":\"\",\"count\":1,\"objects\":[{\"key\":\"izzy.jpg\",\"size\":501298,\"lastModified\":\"2025-03-12T01:47:17.000Z\"}]}"}
